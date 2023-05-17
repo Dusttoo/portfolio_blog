@@ -31,6 +31,9 @@ function hello_elementor_child_scripts_styles() {
 		],
 		HELLO_ELEMENTOR_CHILD_VERSION
 	);
+	if (function_exists("register_sidebar")) {
+		register_sidebar();
+	}
 
 }
 add_action( 'wp_enqueue_scripts', 'hello_elementor_child_scripts_styles', 20 );
